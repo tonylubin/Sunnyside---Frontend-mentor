@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://tonylubin.github.io/Sunnyside---Frontend-mentor/)
+- Live Site URL: [click here](https://tonylubin.github.io/Sunnyside---Frontend-mentor/)
 
 ## My process
 
