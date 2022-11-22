@@ -141,16 +141,16 @@ footer > h2 {
   filter: brightness(0) saturate(100%) invert(99%) sepia(50%) saturate(2%) hue-rotate(80deg) brightness(112%) contrast(101%);
 }
 .icon-holder > .icon-facebook {
-  background-image: url("../../images/icon-facebook.svg");
+  background-image: url("../images/icon-facebook.svg");
 }
 .icon-holder > .icon-instagram {
-  background-image: url("../../images/icon-instagram.svg");
+  background-image: url("../images/icon-instagram.svg");
 }
 .icon-holder > .icon-twitter {
-  background-image: url("../../images/icon-twitter.svg");
+  background-image: url("../images/icon-twitter.svg");
 }
 .icon-holder > .icon-pinterest {
-  background-image: url("../../images/icon-pinterest.svg");
+  background-image: url("../images/icon-pinterest.svg");
 }
 
 .navigation-footer {
@@ -165,7 +165,7 @@ footer > h2 {
 }
 
 .heading {
-  background-image: url("../../images/mobile/image-header.jpg");
+  background-image: url("../images/mobile/image-header.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -201,7 +201,7 @@ footer > h2 {
 
 @media screen and (min-width: 768px) {
   .heading {
-    background-image: url("../../images/desktop/image-header.jpg");
+    background-image: url("../images/desktop/image-header.jpg");
     background-size: cover;
   }
   .heading__container {
