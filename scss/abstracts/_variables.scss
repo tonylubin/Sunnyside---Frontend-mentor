@@ -1,0 +1,37 @@
+// Primary colours
+$p-soft_red: hsl(7, 99%, 70%);
+$p-yellow: hsl(51, 100%, 49%);
+$p-cyan-dark-desaturated: hsl(167, 40%, 24%);
+$p-dark_blue: hsl(198, 62%, 26%);
+$p-cyan-dark-moderate: hsl(168, 34%, 41%);
+
+// Neutral colours
+$n-white: hsl(0, 0%, 100%);
+$n-grayish_blue: hsl(210, 4%, 67%);
+$n-grayish_blue-dark: hsl(232, 10%, 55%);
+$n-grayish_blue-very_dark: hsl(213, 9%, 39%);
+$n-blue-very_dark-desaturated: hsl(212, 27%, 19%);
+$n-bg-footer: hsl(168, 45%, 70%);
+$bg-header: hsl(200deg 100% 62%); 
+
+// Link Hover Colour
+$activeLink-red: hsl(5, 100%, 69%);
+$activeLink-yellow: hsl(51, 100%, 49%);
+
+// Font size
+$fs-body: 18px;
+
+// Fonts & weights
+$font-barlow: 'Barlow', sans-serif;
+$fw600-barlow: 600;
+$fw800-barlow: 800;
+
+$font-fraunces: 'Fraunces', serif;
+$fw700-fraunces: 700;
+$fw900-fraunces: 900;
+
+// Breakpoints - media query
+$tablet: 768px;
+$desktop: 1024px;
+$widescreen: 1216px;
+$fullhd: 1408px;

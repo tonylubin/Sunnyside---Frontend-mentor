@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as *;
+
+.heading {
+    background-image: url('../../images/mobile/image-header.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+
+        > h1 {
+            font-size: 1.5rem;
+            font-weight: $fw800-barlow;
+        }
+    }
+
+    .tagLine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        margin-top: 8rem;
+
+        &__intro {
+            font-size: 2.5rem;
+            font-family: $font-fraunces;
+            font-weight: $fw900-fraunces;
+            color: $n-white;
+            letter-spacing: 0.5rem;
+            line-height: unset;
+            text-align: center;
+        }
+    }
+
+}
+
+@media screen and (min-width: $tablet) {
+
+    .heading {
+        background-image: url('../../images/desktop/image-header.jpg');
+        background-size: cover;
+
+        &__container {
+
+            padding: 3rem;
+
+            > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .tagLine {
+            margin-top: 3rem;
+            
+            &__intro {    
+                font-size: 4rem;
+            }
+        }
+
+    };
+}

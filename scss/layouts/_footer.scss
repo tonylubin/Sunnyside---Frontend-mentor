@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $n-bg-footer;
+    
+    > h2 {
+        font-size: 2.5rem;
+        padding: 5rem 0 3rem 0;
+        font-weight: $fw800-barlow;
+    }
+}
+
+.icon-holder {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 0 5rem 0;
+
+    > .icon {
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+    }
+
+    > .icon:hover {
+        filter: brightness(0) saturate(100%) invert(99%) sepia(50%) saturate(2%) hue-rotate(80deg) brightness(112%) contrast(101%);
+    }
+
+    > .icon-facebook {
+        background-image: url("../../images/icon-facebook.svg");
+    }
+
+    > .icon-instagram {
+        background-image: url("../../images/icon-instagram.svg");
+    }
+
+    > .icon-twitter {
+        background-image: url("../../images/icon-twitter.svg");
+    }
+
+    > .icon-pinterest {
+        background-image: url("../../images/icon-pinterest.svg");
+    }
+}
+
+
+.navigation-footer {
+    display: flex;
+    padding-bottom: 2rem;
+    gap: 3rem;
+    font-family: $font-barlow;
+    color: $p-cyan-dark-moderate;
+
+    > a:hover {
+        color: $n-white;
+    }
+}

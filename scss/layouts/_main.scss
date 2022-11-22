@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media screen and (min-width: $tablet) {
+
+  main {
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+}
+
+@media screen and (min-width: $desktop) {
+  
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    #gridBox1 {
+      order: 2;
+    }
+  
+    #gridBox2 {
+      order: 1;
+    }
+  
+    #gridBox3 {
+      order: 3;
+    }
+  
+    #gridBox4 {
+      order: 4;
+    }
+  
+    #gridBox5 {
+      order: 5;
+    }
+  
+    #gridBox6 {
+      order: 6;
+    }
+  }
+
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+h1 {
+    font-family: $font-barlow;
+    font-weight: $fw600-barlow;
+    color: $n-white;
+}
+
+h2 {
+    font-family: $font-barlow;
+    font-weight: $fw600-barlow;
+    color: $p-cyan-dark-desaturated
+}
+
+p {
+    line-height: 1.8rem;
+}

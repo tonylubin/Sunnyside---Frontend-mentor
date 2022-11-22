@@ -1,0 +1,98 @@
+@use "../abstracts/" as *;
+
+.menu {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.navigation {
+  font-family: $font-barlow;
+  font-weight: $fw600-barlow;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: space-evenly;
+  left: 0;
+  right: 0;
+  top: -115%;
+  margin: auto;
+  width: calc(100% - 4rem);
+  height: 50%;
+  padding: 1.5rem 2rem 1.5rem 3.5rem;
+  border-top: 1.5rem solid hsl(200, 100%, 62%);
+  border-right: 1.5rem solid $n-white;
+  transition: all 1s ease-out;
+  background-color: $n-white;
+  color: $n-grayish_blue-dark;
+
+  &__contact-btn {
+    color: $n-blue-very_dark-desaturated;
+    background-color: $p-yellow;
+    font-family: $font-fraunces;
+    border-radius: 1.5rem;
+    padding: 1rem;
+
+    &:hover {
+      background-color: hsl(51, 87%, 71%);
+      color: $n-white;
+    }
+  }
+}
+
+.show-nav {
+    top: 15%;
+    transition: all 1s ease;
+}
+
+@media screen and (min-width: $tablet) {
+  .menu {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .navigation--mobile {
+    width: calc(100% - 8rem);
+
+    > a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: $widescreen) {
+  
+  .menu {
+    display: none;
+  }
+  
+  .navigation {
+    flex-direction: row;
+    color: $n-white;
+    position: unset;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: unset;
+    width: auto;
+    height: auto;
+    transition: none;
+  
+    &__contact-btn {
+      color: $n-blue-very_dark-desaturated;
+      background-color: $n-white;
+      border-radius: 30px;
+      font-family: $font-fraunces;
+  
+      &:hover {
+        background-color: hsl(200deg 100% 75%);
+        color: $n-white;
+      }
+    }
+
+    > a {
+      padding: 1rem 2rem;
+    }
+  }
+
+}

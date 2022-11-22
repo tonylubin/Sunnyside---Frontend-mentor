@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+body {
+  font-size: 18px;
+  max-width: 100vw;
+}
+
+img {
+  height: 100%;
+  vertical-align: bottom;
+}
+
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+h1 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 100%);
+}
+
+h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: hsl(167deg, 40%, 24%);
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(168deg, 45%, 70%);
+}
+footer > h2 {
+  font-size: 2.5rem;
+  padding: 5rem 0 3rem 0;
+  font-weight: 800;
+}
+
+.icon-holder {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0 5rem 0;
+}
+.icon-holder > .icon {
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+}
+.icon-holder > .icon:hover {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(50%) saturate(2%) hue-rotate(80deg) brightness(112%) contrast(101%);
+}
+.icon-holder > .icon-facebook {
+  background-image: url("../../images/icon-facebook.svg");
+}
+.icon-holder > .icon-instagram {
+  background-image: url("../../images/icon-instagram.svg");
+}
+.icon-holder > .icon-twitter {
+  background-image: url("../../images/icon-twitter.svg");
+}
+.icon-holder > .icon-pinterest {
+  background-image: url("../../images/icon-pinterest.svg");
+}
+
+.navigation-footer {
+  display: flex;
+  padding-bottom: 2rem;
+  gap: 3rem;
+  font-family: "Barlow", sans-serif;
+  color: hsl(168deg, 34%, 41%);
+}
+.navigation-footer > a:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.heading {
+  background-image: url("../../images/mobile/image-header.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+.heading__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.heading__container > h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.heading .tagLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 8rem;
+}
+.heading .tagLine__intro {
+  font-size: 2.5rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 0.5rem;
+  line-height: unset;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    background-image: url("../../images/desktop/image-header.jpg");
+    background-size: cover;
+  }
+  .heading__container {
+    padding: 3rem;
+  }
+  .heading__container > h1 {
+    font-size: 3rem;
+  }
+  .heading .tagLine {
+    margin-top: 3rem;
+  }
+  .heading .tagLine__intro {
+    font-size: 4rem;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main #gridBox1 {
+    order: 2;
+  }
+  main #gridBox2 {
+    order: 1;
+  }
+  main #gridBox3 {
+    order: 3;
+  }
+  main #gridBox4 {
+    order: 4;
+  }
+  main #gridBox5 {
+    order: 5;
+  }
+  main #gridBox6 {
+    order: 6;
+  }
+}
+.menu {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.navigation {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: space-evenly;
+  left: 0;
+  right: 0;
+  top: -115%;
+  margin: auto;
+  width: calc(100% - 4rem);
+  height: 50%;
+  padding: 1.5rem 2rem 1.5rem 3.5rem;
+  border-top: 1.5rem solid hsl(200deg, 100%, 62%);
+  border-right: 1.5rem solid hsl(0deg, 0%, 100%);
+  transition: all 1s ease-out;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(232deg, 10%, 55%);
+}
+.navigation__contact-btn {
+  color: hsl(212deg, 27%, 19%);
+  background-color: hsl(51deg, 100%, 49%);
+  font-family: "Fraunces", serif;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+.navigation__contact-btn:hover {
+  background-color: hsl(51deg, 87%, 71%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.show-nav {
+  top: 15%;
+  transition: all 1s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    height: 3rem;
+    width: 3rem;
+  }
+  .navigation--mobile {
+    width: calc(100% - 8rem);
+  }
+  .navigation--mobile > a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1216px) {
+  .menu {
+    display: none;
+  }
+  .navigation {
+    flex-direction: row;
+    color: hsl(0deg, 0%, 100%);
+    position: unset;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: unset;
+    width: auto;
+    height: auto;
+    transition: none;
+  }
+  .navigation__contact-btn {
+    color: hsl(212deg, 27%, 19%);
+    background-color: hsl(0deg, 0%, 100%);
+    border-radius: 30px;
+    font-family: "Fraunces", serif;
+  }
+  .navigation__contact-btn:hover {
+    background-color: hsl(200deg, 100%, 75%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  .navigation > a {
+    padding: 1rem 2rem;
+  }
+}
+.service-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  padding: 4rem 0rem;
+  gap: 2rem;
+  text-align: center;
+}
+.service-info__heading {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.service-info__text {
+  font-family: "Barlow", sans-serif;
+  color: hsl(232deg, 10%, 55%);
+  padding-bottom: 2rem;
+}
+.service-info__link {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 18px;
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.services > picture {
+  grid-area: 1/1/3/3;
+}
+.services .infoBox {
+  grid-area: 2/1/3/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+.services .infoBox__title {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.services .infoBox__text {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.services-graphic {
+  color: hsl(167deg, 40%, 24%);
+}
+
+.services-photography {
+  color: hsl(198deg, 62%, 26%);
+}
+
+.testimonials {
+  padding: 10rem 0rem;
+}
+.testimonials__heading {
+  text-align: center;
+  padding-bottom: 8rem;
+  font-size: 1.2rem;
+  color: hsl(210deg, 4%, 67%);
+  font-family: "Fraunces", serif;
+  letter-spacing: 0.3rem;
+}
+.testimonials__container {
+  display: grid;
+  gap: 8rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__img {
+  width: 20%;
+  height: auto;
+}
+.card__img > img {
+  border-radius: 50%;
+}
+.card__text {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: hsl(212deg, 27%, 19%);
+  flex-grow: 1;
+}
+.card__person {
+  padding: 1rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+.card__role {
+  color: hsl(210deg, 4%, 67%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+.img_showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.link-container {
+  border-radius: 70px;
+  height: 1rem;
+  width: 10rem;
+  position: relative;
+}
+
+.link-container--red {
+  background-color: rgba(254, 121, 103, 0.2);
+}
+
+.link-container--yellow {
+  background-color: rgba(250, 212, 0, 0.2);
+}
+
+.link-container--yellow--active {
+  background-color: hsl(51deg, 100%, 49%);
+}
+
+.link-container--red--active {
+  background-color: hsl(5deg, 100%, 69%);
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials {
+    padding: 8rem 4rem;
+  }
+  .testimonials__heading {
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+  }
+  .card {
+    font-size: 1.2rem;
+  }
+  .services .infoBox {
+    padding: 0 2rem;
+  }
+  .services .infoBox__title {
+    font-size: 2rem;
+  }
+  .services .infoBox__text {
+    font-size: 1.2rem;
+  }
+  .service-info {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .service-info__heading {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+  .service-info__text {
+    font-size: 1.2rem;
+  }
+  .service-info__link {
+    font-size: 1.2rem;
+  }
+  .img_showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimonials {
+    padding: 10rem 4rem;
+  }
+  .testimonials__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 40%;
+  }
+  .card__text {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1216px) {
+  .img_showcase {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=styles.css.map */
